@@ -7,7 +7,9 @@ Classes:
 - Rectangle: defines a rectangle with a given width and height.
 """
 
+
 class Rectangle:
+
     """
     Defines a rectangle with a given width and height.
 
@@ -17,8 +19,6 @@ class Rectangle:
     """
     pass
 
-# Import the Rectangle class from the 0-rectangle module
-Rectangle = __import__('0-rectangle').Rectangle
 
 # Create an instance of the Rectangle class
 my_rectangle = Rectangle()
