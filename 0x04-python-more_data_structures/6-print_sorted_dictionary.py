@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 def print_sorted_dictionary(a_dictionary):
-    # Get a list of the keys in the dictionary
-    keys = list(a_dictionary.keys())
-
     # Sort the keys alphabetically
-    keys.sort()
+    sorted_keys = sorted(a_dictionary.keys())
 
-    # Iterate through the sorted keys and print the key-value pairs
-    for key in keys:
-        print(key, ":", a_dictionary[key])
+    # Iterate over the sorted keys
+    for key in sorted_keys:
+        # Print the key and its corresponding value
+        print("{}: {}".format(key, a_dictionary[key]))
