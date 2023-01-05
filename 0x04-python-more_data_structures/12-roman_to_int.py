@@ -1,32 +1,50 @@
 #!/usr/bin/python3
-def roman_to_int(roman_number):
-    # Create a dictionary that maps Roman numerals to integers
-    roman_dict = {
-        'I': 1,
-        'V': 5,
-        'X': 10,
-        'L': 50,
-        'C': 100,
-        'D': 500,
-        'M': 1000
+def roman_to_int(roman_string):
+    # Create a dictionary of Roman numerals and corresponding integer values
+    roman_to_int_dict = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
     }
 
-    # Initialize a result variable to store the integer value of the Roman num
+    # Return 0 if roman_string is not a string or None
+    if not isinstance(roman_string, str) or roman_string is None:
+        return 0
+
+    # Initialize result and index variables
     result = 0
+    index = 0
 
-    # Loop through the characters in the Roman numeral from left to right
-    for i in range(len(roman_number)):
-        # Get the integer value of the current Roman numeral
-        current_numeral = roman_dict[roman_number[i]]
+    # Iterate through the characters in the string
+    while index < len(roman_string):
+        # Get the current character and the next character, if it exists
+        current_char = roman_string[index]
+        next_char = roman_string[index+1] if index < len(roman_string)-1
+        else None
 
-        # If the next numeral is larger, it means that the current numeral
-        # So we subtract the current numeral from the result
-        if i + 1 < len(roman_number) and roman_dict[roman_number[i+1]] >
-        current_numeral:
-            result -= current_numeral
-        # Otherwise, we add the current numeral to the result
+        # Check if the current character is a special case
+        if current_char == "I" and next_char in ["V", "X"]:
+            # Add the corresponding value to the result
+            result += roman_to_int_dict[next_char] - roman_to_int_dict
+            [current_char]
+            # Skip the next character by incrementing the index by 2
+            index += 2
+        elif current_char == "X" and next_char in ["L", "C"]:
+            result += roman_to_int_dict[next_char] - roman_to_int_dict
+            [current_char]
+            index += 2
+        elif current_char == "C" and next_char in ["D", "M"]:
+            result += roman_to_int_dict[next_char] - roman_to_int_dict
+            [current_char]
+            index += 2
         else:
-            result += current_numeral
+            # If the current character is not a special case, add its value
+            result += roman_to_int_dict[current_char]
+            # Increment the index by 1
+            index += 1
 
-    # Return the result
     return result
