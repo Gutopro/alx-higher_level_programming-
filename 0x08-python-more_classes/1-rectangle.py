@@ -1,15 +1,50 @@
 #!/usr/bin/python3
 class Rectangle:
-    def __init__(self, width=0, height=0):
+    """
+    A class representing a rectangle.
+
+    ...
+
+    Attributes
+    ----------
+    width : int
+        The width of the rectangle.
+    height : int
+        The height of the rectangle.
+
+    Methods
+    -------
+    __init__(self, width: int, height: int)
+        Initializes the width and height attributes.
+    """
+
+    def __init__(self, width: int, height: int):
+        """Initializes the width and height attributes.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+        """
         self.width = width
         self.height = height
 
     @property
-    def width(self):
+    def width(self) -> int:
+        """int: The width of the rectangle."""
         return self.__width
 
     @width.setter
-    def width(self, value):
+    def width(self, value: int):
+        """
+        The setter method for the width attribute.
+
+        Args:
+            value (int): The new value for the width attribute.
+
+        Raises:
+            TypeError: If the value is not an int.
+            ValueError: If the value is negative.
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -17,11 +52,22 @@ class Rectangle:
         self.__width = value
 
     @property
-    def height(self):
+    def height(self) -> int:
+        """int: The height of the rectangle."""
         return self.__height
 
     @height.setter
-    def height(self, value):
+    def height(self, value: int):
+        """
+        The setter method for the height attribute.
+
+        Args:
+            value (int): The new value for the height attribute.
+
+        Raises:
+            TypeError: If the value is not an int.
+            ValueError: If the value is negative.
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
