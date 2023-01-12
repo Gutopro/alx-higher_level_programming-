@@ -1,50 +1,27 @@
 #!/usr/bin/python3
+# 1-rectangle.py
+"""Defines a Rectangle class."""
+
+
 class Rectangle:
-    """
-    A class representing a rectangle.
+    """Represent a rectangle."""
 
-    ...
-
-    Attributes
-    ----------
-    width : int
-        The width of the rectangle.
-    height : int
-        The height of the rectangle.
-
-    Methods
-    -------
-    __init__(self, width: int, height: int)
-        Initializes the width and height attributes.
-    """
-
-    def __init__(self, width: int, height: int):
-        """Initializes the width and height attributes.
-
+    def __init__(self, width=0, height=0):
+        """Initialize a new Rectangle.
         Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
         """
         self.width = width
         self.height = height
 
     @property
-    def width(self) -> int:
-        """int: The width of the rectangle."""
+    def width(self):
+        """Get/set the width of the rectangle."""
         return self.__width
 
     @width.setter
-    def width(self, value: int):
-        """
-        The setter method for the width attribute.
-
-        Args:
-            value (int): The new value for the width attribute.
-
-        Raises:
-            TypeError: If the value is not an int.
-            ValueError: If the value is negative.
-        """
+    def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -52,22 +29,12 @@ class Rectangle:
         self.__width = value
 
     @property
-    def height(self) -> int:
-        """int: The height of the rectangle."""
+    def height(self):
+        """Get/set the height of the rectangle."""
         return self.__height
 
     @height.setter
-    def height(self, value: int):
-        """
-        The setter method for the height attribute.
-
-        Args:
-            value (int): The new value for the height attribute.
-
-        Raises:
-            TypeError: If the value is not an int.
-            ValueError: If the value is negative.
-        """
+    def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
