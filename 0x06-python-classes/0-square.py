@@ -3,9 +3,17 @@
 """This class defines a square object"""
 
 class Square:
-    """Represents a square"""
+    """
+    Represents a square
+    
+    Attributes:
+        None
+    """
     pass
 if __name__ == "__main__":
+    """
+    imports Square class from 0-square
+    """
     Square = __import__('0-square').Square
 
     my_square = Square()
