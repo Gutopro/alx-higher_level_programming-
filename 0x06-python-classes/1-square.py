@@ -1,28 +1,14 @@
 #!/usr/bin/python3
 # 1-square.py
+"""Define a class Square."""
+
 
 class Square:
-    """
-    Defines a square object.
-    """
+    """Represent a square."""
+
     def __init__(self, size):
-        self.size = size
-
-    def size(self):
-        return self.__size
-
-if __name__ == "__main__":
-    Square = __import__('1-square').Square
-    my_square = Square(3)
-    print(type(my_square))
-    print(my_square.__dict__)
-
-    try:
-        print(my_square.size())
-    except Exception as e:
-        print(e)
-
-    try:
-        print(my_square.size())
-    except Exception as e:
-        print(e)
+        """Initialize a new Square.
+        Args:
+        size (int): The size of the new square.
+        """
+        self.__size = size
