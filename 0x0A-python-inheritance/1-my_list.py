@@ -1,15 +1,17 @@
 #!/usr/bin/python3
+# 2-is_same_class.py
+"""Defines a class-checking function."""
 
-""" a class MyList that inherits from list"""
 
-class MyList(list):
-    """ a subclass of list"""
-    
-    def _init_(self):
-        
-        """ initialize oblect """
-        super()._init_()
-        
-    """ MyList class has a single public instance method"""
-    def print_sorted(self):
-        print(sorted(self))
+def is_same_class(obj, a_class):
+    """Check if an object is exactly an instance of a given class.
+    Args:
+        obj (any): The object to check.
+        a_class (type): The class to match the type of obj to.
+    Returns:
+        If obj is exactly an instance of a_class - True.
+        Otherwise - False.
+    """
+    if type(obj) == a_class:
+        return True
+    return False
