@@ -7,4 +7,5 @@ dir() is a built in function so no import was needed
 
 
 def lookup(obj):
+    """ Returns all attributes of the function """
     return dir(obj)
