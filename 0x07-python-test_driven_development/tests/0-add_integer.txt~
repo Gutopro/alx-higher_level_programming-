@@ -1,0 +1,36 @@
+import doctest
+
+def add_integer(a, b=98):
+    """
+    This function adds two integers together. If either a or b are floats, they will be first casted to integers.
+
+    Args:
+    - a: an integer or float
+    - b: an integer or float (default is 98)
+
+    Returns:
+    - an integer, the sum of a and b
+
+    Examples:
+    >>> add_integer(2, 3)
+    5
+    >>> add_integer(2.5, 3.5)
+    6
+    >>> add_integer('2', 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer or b must be an integer
+    >>> add_integer(2, '3')
+    Traceback (most recent call last):
+    TypeError: a must be an integer or b must be an integer
+    >>> add_integer(2.5, 3)
+    5
+    >>> add_integer(2, 3.5)
+    5
+    >>> add_integer(2.5, 3.5)
+    6
+    """
+    if not (isinstance(a, (int, float)) and isinstance(b, (int, float))):
+        raise TypeError("a must be an integer or b must be an integer")
+    return int(a) + int(b)
+
+doctest.testmod()
