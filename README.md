@@ -1,5 +1,5 @@
-0x00. Python - Hello, World
-Python
+# 0x00. Python - Hello, World
+# Python
  By: Guillaume
  Weight: 1
  Ongoing second chance project - started Nov 28, 2022 6:00 AM, must end by Dec 1, 2022 6:00 AM
@@ -10,7 +10,7 @@ Altogether:  0.0%
 Mandatory: 0.0%
 Optional: 0.0%
 Calculation:  0.0% + (0.0% * 0.0%)  == 0.0%
-Concepts
+# Concepts
 For this project, we expect you to look at this concept:
 
 Python programming
@@ -27,7 +27,7 @@ Like C, Python also has a linter / style guide like Betty, called PEP8, also now
 Enjoy!
 
 - Guillaume
-Resources
+# Resources
 Read or watch:
 
 The Python tutorial (only the first three chapters below)
@@ -40,7 +40,7 @@ Pycodestyle – Style Guide for Python Code
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-General
+# General
 Why Python programming is awesome
 Who created Python
 Who is Guido van Rossum
@@ -51,12 +51,12 @@ How to print text and variables using print
 How to use strings
 What are indexing and slicing in Python
 What is the official Python coding style and how to check your code with pycodestyle
-Copyright - Plagiarism
+# Copyright - Plagiarism
 You are tasked to come up with solutions for the tasks below yourself to meet with the above learning objectives.
 You will not be able to meet the objectives of this or any following project by copying and pasting someone else’s work.
 You are not allowed to publish any content of this project.
 Any form of plagiarism is strictly forbidden and will result in removal from the program.
-Requirements
+# Requirements
 Python Scripts
 Allowed editors: vi, vim, emacs
 All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
